@@ -21,7 +21,8 @@ const session = require('express-session');
 app.use(session({
     secret: 'dogwalk-secret',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: { secure: false }
 }));
 
 // Export the app instead of listening here

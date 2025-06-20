@@ -94,7 +94,7 @@
         async function getCurrentUser() {
           const res = await fetch('/api/users/me')
           currentUser.value = res.json()
-          }
+        }
         onMounted(() => {
           loadWalkRequests();
         });

@@ -54,17 +54,17 @@
           dogUrl.value = data.message;
         }
 
-        async function loadDogs(){
-          try{
+        async function loadDogs() {
+          try {
 
             const res = await fetch("/api/dogs");
             const dogs = await res.json()
-            for(let dog of dogs){
+            for (let dog of dogs) {
               dog.image = dogUrl.value
             }
-            
+            dogsWithPhotos.value = dogs
           }
-          catch(e){
+          catch (e) {
             console.error("failed to load")
           }
         }

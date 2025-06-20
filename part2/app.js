@@ -16,7 +16,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 // session
-const 
+const session = re
 
 // Export the app instead of listening here
 module.exports = app;

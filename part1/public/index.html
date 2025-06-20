@@ -72,11 +72,11 @@
       onMounted() {
         loadDog();
         loadDogs();
-      };
-      return {
+      },
+      return() {
         dogUrl,
-        dogsWithPhotos,
-        loadDog
+          dogsWithPhotos,
+          loadDog
       }
     })
   </script>

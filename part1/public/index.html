@@ -69,17 +69,19 @@
                 };
               })
             );
+
             dogsWithPhotos.value = withPhotos;
           }
           catch (e) {
             console.error("failed to load")
           }
         }
+        onMounted() {
+          loadDog();
+          loadDogs();
+        },
       },
-      onMounted(() => {
-        loadDog();
-        loadDogs();
-      },
+
       return() {
         dogUrl,
           dogsWithPhotos,

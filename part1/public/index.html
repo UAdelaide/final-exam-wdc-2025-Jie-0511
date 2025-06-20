@@ -45,13 +45,12 @@
 
     createApp({
       setup() {
+        const dogUrl = ref('');
         const dogsWithPhotos = ref([]);
-
         async function loadDogs() {
           try {
             const res = await fetch('/api/dogs');
             const dogs = await res.json();
-            console.log(dogs)
             const dogsWithImages = await Promise.all(
               dogs.map(async (dog) => {
                 const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');

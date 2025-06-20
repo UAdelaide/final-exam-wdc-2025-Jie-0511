@@ -61,10 +61,6 @@
     const { createApp, ref, onMounted } = Vue;
     createApp({
       setup(){
-        
-      }
-    })
-      setup() {
         const dogsWithPhotos = ref([]);
 
         async function loadDogs() {
@@ -78,11 +74,15 @@
                 return {
                   ...dog,
                   photoUrl: imgData.message
-              };
-            })
-          );
+                };
+              })
+            );
           }
-        }
+        
+      }
+    })
+
+
           </script>
 
 </body>

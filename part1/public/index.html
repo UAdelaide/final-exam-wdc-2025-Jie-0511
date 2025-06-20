@@ -47,27 +47,13 @@
       setup() {
         const dogUrl = ref('');
         const dogsWithPhotos = ref([]);
-        async function loadDogs() {
-          try {
-            const res = await fetch('/api/dogs');
-            const dogs = await res.json();
-            const dogsWithImages = await Promise.all(
-              dogs.map(async (dog) => {
-                const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
-                const imgData = await imgRes.json();
-                return {
-                  ...dog,
-                  photoUrl: imgData.message
-                };
-              })
-            );
-            dogsWithPhotos.value = dogsWithImages;
 
-            console.log("data", dogsWithImages)
-          } catch (e) {
-            console.error("failed to load")
-          }
+        async function loadDog() {
+          const res = await fetch("https://dog.ceo/api/breeds/image/random");
+          const data = await res.json();
+          dogUrl.value = data.message;
         }
+
       },
       onMounted() {
         loadDogs();

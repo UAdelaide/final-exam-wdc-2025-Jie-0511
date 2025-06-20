@@ -4,7 +4,7 @@ const router = express.Router();
 const db = require('../db');
 
 // 6
-rou
+
 
 // 7
 router.get('/walkrequests/open', async (req, res) => {

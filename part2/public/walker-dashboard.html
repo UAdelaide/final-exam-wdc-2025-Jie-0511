@@ -59,7 +59,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        con s
+        const currentUser = ref(null)
         const user = 3;
 
         async function loadWalkRequests() {
@@ -91,6 +91,9 @@
           }
         }
 
+        async function getCurrentUser() {
+
+        }
         onMounted(() => {
           loadWalkRequests();
         });

@@ -73,7 +73,9 @@ router.get('/owner/dogs', async (req, res) => {
     `, [ownerId]);
 
     res.json(dogs);
+  } catch (err) {
     
+  }
 
   }
 

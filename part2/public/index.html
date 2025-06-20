@@ -23,13 +23,14 @@
   <from id="loginForm">
     <input type="email" name="email" placeholder="Email" required />
     <input type="password" name="password" placeholder="Password" required />
-    <button type="submit" id="submiBtnLogin">log in</button>
+    <button type="submit" id="submiBtnLogin"></button>
     </form>
     <p id=" loginError" style="color: red;"></p>
 
     <script>
-      document.getElementById('submiBtnLogin').addEventListener('click', async (e) => {
+      document.getElementById('submiBtnLogin').addEventListener('submit', async (e) => {
         e.preventDefault();
+        const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
 

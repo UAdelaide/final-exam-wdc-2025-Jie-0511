@@ -149,8 +149,16 @@
     }).mount('#app');
   </script>
 
+  <script>
+    async function loadDogs() {
+        try {
+          const res = await fetch('/api/walks/owner/dogs');
+          const dogs = await res.json();
+          
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  
+
 </body>
 </html>

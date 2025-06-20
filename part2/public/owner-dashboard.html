@@ -136,6 +136,23 @@
           }
         }
 
+        async function loadDogs() {
+          try {
+            const res = await fetch('/api/walks/owner/dogs');
+            const dogs = await res.json();
+
+            const dogSelect = document.getElementById('dogSelect');
+            dogs.forEach(dog => {
+              const option = document.createElement('option');
+              option.value = dog.dog_id;
+              option.textContent = dog.name;
+              dogSelect.appendChild(option);
+            });
+          } catch (error) {
+            console.error('Failed to load dogs:', error);
+          }
+        }
+        
         onMounted(() => {
           loadWalks();
         });

@@ -59,9 +59,10 @@
 
             const res = await fetch("/api/dogs");
             const dogs = await res.json()
-            for(let dog of dogs{
-              dog.image = do
-            })
+            for(let dog of dogs){
+              dog.image = dogUrl.value
+            }
+            
           }
           catch(e){
             console.error("failed to load")

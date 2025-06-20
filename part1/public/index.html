@@ -58,7 +58,7 @@
           try{
 
             const res = await fetch("/api/dogs");
-            cons
+            const dogs = await res.json()
           }
           catch(e){
             console.error("failed to load")

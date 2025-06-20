@@ -54,7 +54,7 @@ router.post('/login', async (req, res) => {
     // Save user session info
     req.session.user = user;
 
-    // Return to the jump page 
+    // Return to the jump page based on role
     const redirectUrl = user.role === 'owner' ? '/owner-dashboard.html' : '/walker-dashboard.html';
 
     res.json({ message: 'Login successful', redirect: redirectUrl });

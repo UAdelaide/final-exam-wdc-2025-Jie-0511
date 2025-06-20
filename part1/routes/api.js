@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-// 第6题：获取所有狗的信息
+// 6
 router.get('/dogs', async (req, res) => {
     try {
         const [rows] = await db.query(`
@@ -18,7 +18,7 @@ router.get('/dogs', async (req, res) => {
     }
 });
 
-// 第7题：获取所有 open 状态的 walk requests
+// 7
 router.get('/walkrequests/open', async (req, res) => {
     try {
         const [rows] = await db.query(`
@@ -36,7 +36,7 @@ router.get('/walkrequests/open', async (req, res) => {
     }
 });
 
-// 第8题：walker 统计信息
+// 8
 router.get('/walkers/summary', async (req, res) => {
     try {
         const [rows] = await db.query(`

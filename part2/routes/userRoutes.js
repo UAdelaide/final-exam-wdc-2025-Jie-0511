@@ -67,6 +67,10 @@ router.post('/login', async (req, res) => {
 
 router.post("/logout", async (req, res) => {
   console.log("this is logout api");
-  
+  try {
+    req.session.destroy((err) => {
+      
+    }
+  }
 });
 module.exports = router;

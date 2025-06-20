@@ -55,7 +55,11 @@
         }
 
         async function loadDogs(){
-          try(){}
+          try{
+
+            const res = await fetch("https://dog.ceo/api/breeds/image/random");
+
+          }
           catch(e){
             console.error("failed to load")
           }

@@ -37,7 +37,13 @@
 
   <!-- Logout Button for Walker -->
   <button id="logoutBtn" class="btn btn-danger">Logout</button>
-  
+  <script>
+    //
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+        const res = await fetch('/api/users/logout', { method: 'POST' });
+        const data = await res.json();
+
+  </script>
 
   <script>
     const { createApp, ref, onMounted } = Vue;

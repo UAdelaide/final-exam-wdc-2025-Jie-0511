@@ -58,9 +58,17 @@
 
             const res = await fetch("/api/dogs");
             const dogs = await res.json()
-            for (let dog of dogs) {
-              dog.image = dogUrl.value
-            }
+
+            const withPhotos = await Promise.all(
+              dogs.map(async (dog) => {
+                const imgRes = await fetch("https://dog.ceo/api/breeds/image/random");
+                const imgData = await imgRes.json();
+                return {
+                  ...dog,
+                  photoUrl: imgData.message
+                };
+              })
+            );
             dogsWithPhotos.value = dogs
           }
           catch (e) {

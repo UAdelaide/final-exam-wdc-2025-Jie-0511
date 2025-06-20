@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Dog of the day</title>
   <script src="https://unpkg.com/vue@3"></script>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
-  <div id ="app">
+  <div id="app">
     <h1>Welcome to Dog of the Day</h1>
-    <button class ="button" @click ="loadDog">Click me NOW!</button>
+    <button class="button" @click="loadDog">Click me NOW!</button>
     <div v-if="dogUrl">
-      <img :scr="dogUrl" alt="Cute Dog"/>
+      <img :scr="dogUrl" alt="Cute Dog" />
       <p class="hidden-text">Dog loaded dynamically, visual only</p>
     </div>
   </div>
@@ -19,21 +21,22 @@
   <script>
     const { createApp } = Vue;
     createApp({
-      data(){
-        return{
-          dogUrl:""
+      data() {
+        return {
+          dogUrl: ""
         };
       },
-      methods:{
-        async loadDog(){
-          const res =await fetch("https://dog.ceo/api/breeds/image/random")
+      methods: {
+        async loadDog() {
+          const res = await fetch("https://dog.ceo/api/breeds/image/random")
           const data = await res.json();
           this.dogUrl = data.message;
-          console.log("image", data)
+          console.log("image", this.dogUrl)
         }
       }
     }).mount("#app");
   </script>
 
 </body>
+
 </html>

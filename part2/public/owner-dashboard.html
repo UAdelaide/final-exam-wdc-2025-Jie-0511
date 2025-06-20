@@ -67,7 +67,18 @@
   <!-- Logout Button -->
   <button id="logoutBtn" class="btn btn-danger">Logout</button>
 
-  
+  <script>
+    // Add logout handler
+      document.getElementById('logoutBtn').addEventListener('click', async () => {
+        const res = await fetch('/api/users/logout', { method: 'POST' });
+        const data = await res.json();
+        if (res.ok) {
+          window.location.href = '/index.html'; // redirect to login page
+        } else {
+          alert('Logout failed: ' + data.error);
+        }
+      });
+  </script>
 
 
 

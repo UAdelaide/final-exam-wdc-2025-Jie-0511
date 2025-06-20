@@ -8,7 +8,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-
+var apiRouter = require('./routes/api');
+app.use('/api', apiRouter);
 
 app.use(logger('dev'));
 app.use(express.json());

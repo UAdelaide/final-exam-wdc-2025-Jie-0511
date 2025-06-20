@@ -41,7 +41,7 @@
   </div>
 
   <script>
-    const { createApp } = Vue;
+      const { createApp, ref, onMounted } = Vue;
     createApp({
       data() {
         return {
@@ -58,10 +58,8 @@
       }
     }).mount("#app");
 
-    const { createApp, ref, onMounted } = Vue;
     createApp({
       setup() {
-        const dogsWithPhotos = ref([]);
 
         async function loadDogs() {
           try {

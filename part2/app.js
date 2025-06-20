@@ -20,7 +20,7 @@ app.use('/api/users', userRoutes);
 const session = require('express-session');
 app.use(session({
     secret: 'dogwalk-secret',
-    esave: false,
+    resave: false,
     saveUninitialized: true
 }));
 

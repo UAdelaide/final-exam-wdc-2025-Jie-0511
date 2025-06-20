@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
     }
 
     const user = rows[0];
-
+    console.log("user", user);
     // Save user session info
     req.session.user = user;
     console.log("req", req.session);

@@ -95,7 +95,7 @@
 
         async function getCurrentUser() {
           const res = await fetch('/api/users/me')
-          currentUser.value = res.json()
+          currentUser.value = await res.json()
           console.log(currentUser.value)
         }
         onMounted(() => {

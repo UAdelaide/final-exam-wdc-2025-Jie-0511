@@ -38,10 +38,12 @@
   <!-- Logout Button for Walker -->
   <button id="logoutBtn" class="btn btn-danger">Logout</button>
   <script>
-    //
+    //Handle logout button
     document.getElementById('logoutBtn').addEventListener('click', async () => {
         const res = await fetch('/api/users/logout', { method: 'POST' });
         const data = await res.json();
+        if (res.ok) {
+        window.location.href = '/index.html'; 
 
   </script>
 

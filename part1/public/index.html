@@ -76,10 +76,10 @@
             console.error("failed to load")
           }
         }
-        onMounted() {
+        onMounted(() => {
           loadDog();
           loadDogs();
-        },
+        });
       },
 
       return() {

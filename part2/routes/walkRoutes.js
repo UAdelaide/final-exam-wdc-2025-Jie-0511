@@ -72,6 +72,10 @@ router.get('/owner/dogs', async (req, res) => {
       WHERE owner_id = ?
     `, [ownerId]);
 
+    res.json
+
+  }
+
 
 
 

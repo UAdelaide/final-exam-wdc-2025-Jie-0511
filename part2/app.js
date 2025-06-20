@@ -16,7 +16,10 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 // session
-const session = require ('express-session')
+const session = require('express-session');
+app.use({
+    
+})
 
 // Export the app instead of listening here
 module.exports = app;

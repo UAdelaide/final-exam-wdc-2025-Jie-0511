@@ -62,7 +62,14 @@
     createApp({
       setup() {
         const dogsWithPhotos = ref([]);
-        
+
+        async function loadDogs() {
+          try {
+            const res = await fetch('/api/dogs');
+            const dogs = await res.json();
+
+            
+
       }
     })
   </script>

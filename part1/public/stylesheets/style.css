@@ -21,17 +21,7 @@ h2 {
 
 .button {
   font-size: 1.2rem;
-  padding: 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-img {
-  max-width: 300px;
-  margin-top: 20px;
-}
+ 
 
 .hidden-text {
   color: #666;

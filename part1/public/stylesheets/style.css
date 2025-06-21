@@ -12,6 +12,13 @@ h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+
+h2 {
+  color: #34495e;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
 .button {
   font-size: 1.2rem;
   padding: 10px;
@@ -30,3 +37,13 @@ img {
   color: #666;
   font-size: 0.9rem;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+

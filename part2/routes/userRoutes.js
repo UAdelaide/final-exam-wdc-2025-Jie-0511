@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // check 
+    // check whether the user with specif
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE email = ? AND password_hash = ?

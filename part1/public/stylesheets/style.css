@@ -15,3 +15,13 @@ a {
   border: none;
   cursor: pointer;
 }
+
+img {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.hidden-text {
+  color: #666;
+  font-size: 0.9rem;
+}

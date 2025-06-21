@@ -96,7 +96,7 @@
           }
         }
 
-        //
+        // Get the current logged-in user information and save it to currentUser
         async function getCurrentUser() {
           const res = await fetch('/api/users/me')
           currentUser.value = await res.json()

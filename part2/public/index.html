@@ -43,7 +43,7 @@
       const data = await res.json();
       console.log("data", data)
       if (res.ok) {
-        window.location.href = data.redirect; // redict 
+        window.location.href = data.redirect; // redict to page after succ
       }
       else {
         document.getElementById('loginError').innerText = data.error;

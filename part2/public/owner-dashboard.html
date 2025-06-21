@@ -76,7 +76,7 @@
   <script>
     // Add logout handler
     document.getElementById('logoutBtn').addEventListener('click', async () => {
-      //
+      //call logout endpoint
       const res = await fetch('/api/users/logout', { method: 'POST' });
       const data = await res.json();
       if (res.ok) {

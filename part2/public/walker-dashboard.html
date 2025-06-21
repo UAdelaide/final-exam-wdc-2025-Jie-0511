@@ -96,11 +96,13 @@
           }
         }
 
+        //
         async function getCurrentUser() {
           const res = await fetch('/api/users/me')
           currentUser.value = await res.json()
           console.log(currentUser.value)
         }
+        
         onMounted(() => {
           loadWalkRequests();
           getCurrentUser();

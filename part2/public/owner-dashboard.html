@@ -79,7 +79,9 @@
       //call logout endpoint
       const res = await fetch('/api/users/logout', { method: 'POST' });
       const data = await res.json();
+
       if (res.ok) {
+        //redirect to 
         window.location.href = '/index.html';
       } else {
         alert('Logout failed: ' + data.error);

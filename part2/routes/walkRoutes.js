@@ -65,13 +65,13 @@ router.get('/owner/dogs', async (req, res) => {
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  const ownerId = req.session.user.user_id;
+  const ownerUserId = req.session.user.user_id;
 
   try {
     const [dogs] = await db.query(`
       SELECT dog_id, name FROM Dogs
       WHERE owner_id = ?
-    `, [ownerId]);
+    `, [ownerUserId]);
 
     res.json(dogs);
   } catch (err) {

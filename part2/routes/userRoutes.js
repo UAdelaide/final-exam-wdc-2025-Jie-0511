@@ -70,7 +70,7 @@ router.post("/logout", async (req, res) => {
   console.log("this is logout api");
 
   try {
-    //
+    // Terminate the current session to log out the user
     req.session.destroy((err) => {
       if (err) {
         console.error("Logout failed", err);

@@ -35,7 +35,7 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// POST login (dummy version)
+// POST login
 router.post('/login', async (req, res) => {
   console.log("this is login api", req.body);
   const { email, password } = req.body;

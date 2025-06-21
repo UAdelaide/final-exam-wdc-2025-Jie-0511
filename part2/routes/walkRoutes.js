@@ -59,6 +59,7 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
+
 router.get('/owner/dogs', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(401).json({ error: 'Unauthorized' });

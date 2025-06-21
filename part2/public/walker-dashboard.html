@@ -64,7 +64,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const currentUser = ref(null)
+        const currentUser = ref(null) //
         const user = 3;
 
         async function loadWalkRequests() {
@@ -102,7 +102,7 @@
           currentUser.value = await res.json()
           console.log(currentUser.value)
         }
-        
+
         onMounted(() => {
           loadWalkRequests();
           getCurrentUser();

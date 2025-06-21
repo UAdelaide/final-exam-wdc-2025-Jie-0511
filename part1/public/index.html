@@ -49,6 +49,7 @@
         const dogUrl = ref('');
         const dogsWithPhotos = ref([]);
 
+        // Load random images when clicking the button
         async function loadDog() {
           const res = await fetch("https://dog.ceo/api/breeds/image/random");
           const data = await res.json();

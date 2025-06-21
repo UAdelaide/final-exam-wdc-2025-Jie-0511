@@ -43,10 +43,12 @@
   <script>
     //Handle logout button
     document.getElementById('logoutBtn').addEventListener('click', async () => {
-
+      //call logout endpoint
       const res = await fetch('/api/users/logout', { method: 'POST' });
       const data = await res.json();
+
       if (res.ok) {
+        ////redirect to index.html
         window.location.href = '/index.html';
       } else {
         alert('Logout failed: ' + data.error);
